@@ -4,7 +4,7 @@
 
 # Deployed Backend
 
-[--->Deployed Site <---](https://wedding-portfolio-bw.herokuapp.com)
+[--->Deployed Site <---](https://airbnbclonedevin.herokuapp.com)
 
 # Technologies
 
