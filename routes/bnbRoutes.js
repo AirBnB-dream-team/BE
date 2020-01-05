@@ -86,6 +86,18 @@ server.get("/:id", (req, res) => {
     });
 });
 
+server.get("/reserved/:id", (req, res) => {
+  const { id } = req.params;
+  helpers
+    .getreservedbnb(id)
+    .then(rentals => {
+      res.status(200).json(rentals);
+    })
+    .catch(err => {
+      res.status(500).json({ message: "Error Fetching rentals", error: err });
+      console.log(err);
+    });
+});
 server.put("/:id", (req, res) => {
   const { id } = req.params;
   const changes = req.body;

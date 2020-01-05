@@ -26,7 +26,24 @@ const getuserbnb = id => {
       "bnb.date"
     );
 };
-
+const getreservedbnb = id => {
+  return db("bnb")
+    .where("reserved", "=", id)
+    .select(
+      "bnb.id",
+      "bnb.planner_id",
+      "bnb.bath_number",
+      "bnb.zip",
+      "bnb.address",
+      "bnb.city",
+      "bnb.state",
+      "bnb.email",
+      "bnb.sqft",
+      "bnb.price",
+      "bnb.reserved",
+      "bnb.date"
+    );
+};
 function findBy(filter) {
   return db("bnb").where(filter);
 }
@@ -34,20 +51,20 @@ function findBy(filter) {
 function update(changes, id) {
   return db("bnb")
     .where({ id })
-    .update(changes);
+    .update(changes, "id");
 }
 const remove = id => {
-    return db("bnb")
-      .where({ id })
-      .delete();
-  };
+  return db("bnb")
+    .where({ id })
+    .delete();
+};
 
-  module.exports = {
-    addbnb,
-    getbnb,
-    getuserbnb,
-    update,
-    findBy,
-    remove
-  };
-  
+module.exports = {
+  addbnb,
+  getbnb,
+  getuserbnb,
+  getreservedbnb,
+  update,
+  findBy,
+  remove
+};
