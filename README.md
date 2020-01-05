@@ -5,6 +5,7 @@
 # Deployed Backend
 
 [--->Deployed Site <---](https://airbnbclonedevin.herokuapp.com)
+https://airbnbclonedevin.herokuapp.com
 
 # Technologies
 
