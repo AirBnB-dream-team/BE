@@ -22,7 +22,8 @@ express.post("/register", (req, res) => {
   }
 });
 
-express.post("/login", (req, res) => {
+
+expres.post("/login", (req, res) => {
   let { username, password } = req.body;
   if (username && password) {
     authHelpers
