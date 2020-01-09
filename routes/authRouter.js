@@ -22,8 +22,7 @@ express.post("/register", (req, res) => {
   }
 });
 
-
-expres.post("/login", (req, res) => {
+express.post("/login", (req, res) => {
   let { username, password } = req.body;
   if (username && password) {
     authHelpers
@@ -48,7 +47,7 @@ expres.post("/login", (req, res) => {
         console.log("login error", error);
         res.status(500).json({ error });
       });
-  } else{
+  } else {
     res.status(500).json({ message: "must have username and password" });
   }
 });
