@@ -7,7 +7,7 @@ server.post("/:id", (req, res) => {
     bath_number: req.body.bath_number,
     bed_number: req.body.bed_number,
     zip: req.body.zip,
-    address: req.body.date,
+    address: req.body.address,
     city: req.body.city,
     state: req.body.state,
     email: req.body.email,
